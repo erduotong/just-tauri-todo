@@ -26,13 +26,17 @@ async function greet() {
         <!--<img src="assets/vue.svg" class="logo vue" alt="Vue logo" />-->
       </a>
     </div>
-    <p>Click on the Tauri, Vite, and Vue logos to learn more.</p>
+    <p >Click on the Tauri, Vite, and Vue logos to learn more.</p>
 
     <form class="row" @submit.prevent="greet">
       <input id="greet-input" v-model="name" placeholder="Enter a name..." />
       <button type="submit">Greet</button>
     </form>
     <p>{{ greetMsg }}</p>
+    <div class="bg-red-800">more text</div>
+    <h1 class="text-3xl font-bold underline bg-red-800">
+      Hello world!
+    </h1>
   </main>
 </template>
 
