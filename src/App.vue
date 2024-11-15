@@ -43,7 +43,12 @@ async function removeTodo(index: number) {
 
 // @ts-ignore
 async function addTodo() {
-  todoContentInput.value = await invoke("add_todo", {content: todoContentInput.value})
+  if (todoContentInput.value === "") {
+    return
+  }
+  const res = await invoke("add_todo", {content: todoContentInput.value}) as todoList
+  console.log(res);
+  todoList.value = res;
 }
 </script>
 
